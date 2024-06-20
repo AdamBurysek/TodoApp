@@ -20,6 +20,8 @@ final class Todo {
     @Attribute(.externalStorage)
     var image: Data?
     
+    var tags: [Tag]?
+    
     init(name:String, isDone: Bool = false, priority: Int = 0) {
         self.creationDate = Date()
         self.name = name
@@ -28,11 +30,4 @@ final class Todo {
     }
 }
 
-@Model
-final class Tag {
-    var name: String
-    
-    init(name: String) {
-        self.name = name
-    }
-}
+

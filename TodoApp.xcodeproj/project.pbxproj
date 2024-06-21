@@ -15,6 +15,7 @@
 		212D29CB2C24692500EA5147 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212D29CA2C24692500EA5147 /* Tag.swift */; };
 		212D29CD2C24697400EA5147 /* RGBColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212D29CC2C24697400EA5147 /* RGBColor.swift */; };
 		2170678D2C25A74800A3985B /* DetailTodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2170678C2C25A74800A3985B /* DetailTodoView.swift */; };
+		2170678F2C25E9FA00A3985B /* TodoRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2170678E2C25E9FA00A3985B /* TodoRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		212D29CA2C24692500EA5147 /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
 		212D29CC2C24697400EA5147 /* RGBColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGBColor.swift; sourceTree = "<group>"; };
 		2170678C2C25A74800A3985B /* DetailTodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTodoView.swift; sourceTree = "<group>"; };
+		2170678E2C25E9FA00A3985B /* TodoRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				212D299D2C24578400EA5147 /* TodoAppApp.swift */,
 				212D299F2C24578400EA5147 /* ContentView.swift */,
+				2170678E2C25E9FA00A3985B /* TodoRow.swift */,
 				2170678C2C25A74800A3985B /* DetailTodoView.swift */,
 				212D29C92C2468DE00EA5147 /* model */,
 				212D29A32C24578500EA5147 /* Assets.xcassets */,
@@ -253,6 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				212D29CB2C24692500EA5147 /* Tag.swift in Sources */,
+				2170678F2C25E9FA00A3985B /* TodoRow.swift in Sources */,
 				212D29CD2C24697400EA5147 /* RGBColor.swift in Sources */,
 				212D29A02C24578400EA5147 /* ContentView.swift in Sources */,
 				2170678D2C25A74800A3985B /* DetailTodoView.swift in Sources */,

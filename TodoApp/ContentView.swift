@@ -19,7 +19,11 @@ struct ContentView: View {
                     NavigationLink {
                    DetailTodoView(todo: todo)
                     } label: {
-                        Text(todo.name)
+                        HStack{
+                            Image(systemName: todo.isDone ? "checkmark.circle.fill": "circle")
+                                .foregroundStyle(todo.isDone ? .green : .gray)
+                            Text(todo.name)
+                        }
                     }
                 }
                 .onDelete(perform: deleteItems)

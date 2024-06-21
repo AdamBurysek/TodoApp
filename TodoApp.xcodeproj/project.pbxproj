@@ -96,10 +96,10 @@
 			children = (
 				212D299D2C24578400EA5147 /* TodoAppApp.swift */,
 				212D299F2C24578400EA5147 /* ContentView.swift */,
+				2170678C2C25A74800A3985B /* DetailTodoView.swift */,
 				212D29C92C2468DE00EA5147 /* model */,
 				212D29A32C24578500EA5147 /* Assets.xcassets */,
 				212D29A52C24578500EA5147 /* Preview Content */,
-				2170678C2C25A74800A3985B /* DetailTodoView.swift */,
 			);
 			path = TodoApp;
 			sourceTree = "<group>";

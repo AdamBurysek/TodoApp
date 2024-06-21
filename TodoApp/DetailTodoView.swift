@@ -23,7 +23,7 @@ struct DetailTodoView: View {
         HStack {
             Text("Tags:")
             
-            ForEach(todo.tags ?? []) { tag in
+            ForEach(todo.tags?.sorted(by: {$0.name < $1.name}) ?? []) { tag in
                 Text(tag.name)
                     .padding(5)
                     .overlay {

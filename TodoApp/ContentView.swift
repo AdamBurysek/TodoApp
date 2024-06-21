@@ -10,19 +10,33 @@ import SwiftData
 
 struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
-    @Query private var items: [Todo]
+    //@Query (sort: \Todo.creationDate, order: .reverse)private var items: [Todo]
+    
+    @Query (sort: [.init(\Todo.name) ,.init(\Todo.creationDate, order: .reverse)], animation: .bouncy) private var todos: [Todo]
 
+    @Query(filter: #Predicate<Todo>{ !$0.isDone}, sort: [.init(\Todo.name) ,.init(\Todo.creationDate, order: .reverse)], animation: .bouncy) private var remainingTodos: [Todo]
+
+    
     var body: some View {
         NavigationSplitView {
             List {
-                ForEach(items) { todo in
-                    NavigationLink {
-                   DetailTodoView(todo: todo)
-                    } label: {
-                      TodoRow(todo: todo)
+                Section("All todos:"){
+                    ForEach(todos) { todo in
+                        NavigationLink {
+                       DetailTodoView(todo: todo)
+                        } label: {
+                          TodoRow(todo: todo)
+                        }
+                    }
+                    .onDelete(perform: deleteItems)
+                }
+           
+                
+                Section("Still not done:") {
+                    ForEach(remainingTodos) { todo in
+                        TodoRow(todo: todo)
                     }
                 }
-                .onDelete(perform: deleteItems)
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
@@ -49,7 +63,7 @@ struct ContentView: View {
     private func deleteItems(offsets: IndexSet) {
         withAnimation {
             for index in offsets {
-                modelContext.delete(items[index])
+                modelContext.delete(todos[index])
             }
         }
     }

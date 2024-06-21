@@ -15,11 +15,11 @@ struct ContentView: View {
     var body: some View {
         NavigationSplitView {
             List {
-                ForEach(items) { item in
+                ForEach(items) { todo in
                     NavigationLink {
-                        Text("Item at \(item.creationDate, format: Date.FormatStyle(date: .numeric, time: .standard))")
+                   DetailTodoView(todo: todo)
                     } label: {
-                        Text(item.creationDate, format: Date.FormatStyle(date: .numeric, time: .standard))
+                        Text(todo.name)
                     }
                 }
                 .onDelete(perform: deleteItems)

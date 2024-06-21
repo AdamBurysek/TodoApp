@@ -14,6 +14,7 @@
 		212D29A72C24578500EA5147 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 212D29A62C24578500EA5147 /* Preview Assets.xcassets */; };
 		212D29CB2C24692500EA5147 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212D29CA2C24692500EA5147 /* Tag.swift */; };
 		212D29CD2C24697400EA5147 /* RGBColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212D29CC2C24697400EA5147 /* RGBColor.swift */; };
+		2170678D2C25A74800A3985B /* DetailTodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2170678C2C25A74800A3985B /* DetailTodoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		212D29B62C24578500EA5147 /* TodoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodoAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		212D29CA2C24692500EA5147 /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
 		212D29CC2C24697400EA5147 /* RGBColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGBColor.swift; sourceTree = "<group>"; };
+		2170678C2C25A74800A3985B /* DetailTodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTodoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 				212D29C92C2468DE00EA5147 /* model */,
 				212D29A32C24578500EA5147 /* Assets.xcassets */,
 				212D29A52C24578500EA5147 /* Preview Content */,
+				2170678C2C25A74800A3985B /* DetailTodoView.swift */,
 			);
 			path = TodoApp;
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 				212D29CB2C24692500EA5147 /* Tag.swift in Sources */,
 				212D29CD2C24697400EA5147 /* RGBColor.swift in Sources */,
 				212D29A02C24578400EA5147 /* ContentView.swift in Sources */,
+				2170678D2C25A74800A3985B /* DetailTodoView.swift in Sources */,
 				212D29A22C24578400EA5147 /* Todo.swift in Sources */,
 				212D299E2C24578400EA5147 /* TodoAppApp.swift in Sources */,
 			);

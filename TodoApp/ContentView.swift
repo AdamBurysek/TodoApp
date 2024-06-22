@@ -12,15 +12,15 @@ struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
     //@Query (sort: \Todo.creationDate, order: .reverse)private var items: [Todo]
     
-    @Query (sort: [.init(\Todo.name) ,.init(\Todo.creationDate, order: .reverse)], animation: .bouncy) private var todos: [Todo]
+    @Query (filter: #Predicate<Todo>{ !$0.isDone}, sort: [.init(\Todo.name) ,.init(\Todo.creationDate, order: .reverse)], animation: .bouncy) private var todos: [Todo]
 
-    @Query(filter: #Predicate<Todo>{ !$0.isDone}, sort: [.init(\Todo.name) ,.init(\Todo.creationDate, order: .reverse)], animation: .bouncy) private var remainingTodos: [Todo]
+    @Query(filter: #Predicate<Todo>{ $0.isDone}, sort: [.init(\Todo.name) ,.init(\Todo.creationDate, order: .reverse)], animation: .bouncy) private var remainingTodos: [Todo]
 
     
     var body: some View {
         NavigationSplitView {
             List {
-                Section("All todos:"){
+                Section("All todos:") {
                     ForEach(todos) { todo in
                         NavigationLink {
                        DetailTodoView(todo: todo)
@@ -32,10 +32,15 @@ struct ContentView: View {
                 }
            
                 
-                Section("Still not done:") {
+                Section("Done todo:") {
                     ForEach(remainingTodos) { todo in
-                        TodoRow(todo: todo)
+                        NavigationLink {
+                       DetailTodoView(todo: todo)
+                        } label: {
+                          TodoRow(todo: todo)
+                        }
                     }
+                    .onDelete(perform: deleteItems)
                 }
             }
             .toolbar {

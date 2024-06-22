@@ -48,8 +48,11 @@ struct DetailTodoView: View {
     }
 }
 
-/*
- #Preview {
- DetailTodoView()
- }
- */
+
+struct DetailTodoView_Previews: PreviewProvider {
+    @State static var todo = Todo(name: "Sample Todo", isDone: false)
+    
+    static var previews: some View {
+        DetailTodoView(todo: todo) // Pass a binding to the state variable
+    }
+}
